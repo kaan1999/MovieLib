@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const btnList = document.querySelector('.main__btn-list');
     const btnFind = document.querySelector('.main__btn-find');
 
+    const elNumOfMovies = document.querySelector('.main__num-of-movies>p:nth-child(2)');
     const elMovieList = document.querySelector('.main__list');
 
     let movieLibMap = new Map();
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const txtNode = document.createTextNode(txt)
         elP.appendChild(txtNode)
+        elNumOfMovies.textContent = String(movieLibMap.size)
     }
 
     btnAdd.addEventListener('click', function(e) {

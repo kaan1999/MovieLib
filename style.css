@@ -53,7 +53,7 @@ header{
 main{
     display: grid;
     grid-template-columns: max-content;
-    grid-template-rows: 1fr 400px;
+    grid-template-rows: 50px 1fr 400px;
     width: min-content;
     max-width: 1000px;
     margin: 0 auto;
@@ -61,7 +61,10 @@ main{
     font-size: var(--fs-normal);
     max-width: 1000px;
     justify-items: center;
-
+}
+.main__num-of-movies{
+    align-self: center;
+    text-align: center;
 }
 @media screen and (min-width: 1000px) {
     grid-template-columns: 1000px;
@@ -81,7 +84,7 @@ main{
 @media screen and (max-width: 800px){
     main{
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 2fr auto;
+        grid-template-rows: 50px 1fr 200px;
     }
     .main__label{
         grid-column: 1/-1;
