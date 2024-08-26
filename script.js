@@ -22,13 +22,25 @@ document.addEventListener('DOMContentLoaded', function() {
         const txtNode = document.createTextNode(txt)
         elP.appendChild(txtNode)
     }
-
+    function makeDisplayNone(buttons, btn){
+        buttons.forEach(function(button){
+            button.style.display = 'none';
+        })
+        btn.style.gridColumn = '1/-1'
+    }
+    function makeDisplayBlock(buttons, btn){
+        buttons.forEach(function(button){
+            button.style.display = 'block';
+        })
+        btn.style.gridColumn = 'span 1'
+    }
     btnAdd.addEventListener('click', function(e) {
         if(labels[1].style.display === 'none'){
             labels[1].style.display = 'block';
             labels[2].style.display = 'block';
             inputs[1].style.display = 'block';
             inputs[2].style.display = 'block';
+            makeDisplayNone([btnRemove, btnUpdate, btnFind, btnList], btnAdd);
         }
         else{
             const movieName = inputs[0].value;
@@ -45,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
             labels[2].style.display = 'none';
             inputs[1].style.display = 'none';
             inputs[2].style.display = 'none';
+            makeDisplayBlock([btnRemove, btnUpdate, btnFind, btnList], btnAdd);
         }
     })
 
@@ -91,6 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
             labels[2].style.display = 'block';
             inputs[1].style.display = 'block';
             inputs[2].style.display = 'block';
+            makeDisplayNone([btnAdd, btnRemove, btnFind, btnList], btnUpdate)
         }
         else{
             const movieName = inputs[0].value;
@@ -105,6 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
             labels[2].style.display = 'none';
             inputs[1].style.display = 'none';
             inputs[2].style.display = 'none';
+            makeDisplayBlock([btnAdd, btnRemove, btnFind, btnList], btnUpdate)
         }
     })
 
