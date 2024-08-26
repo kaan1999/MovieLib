@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    </head>
+    <body>
+    <script src="script.js"></script>
+
+
+        <header>
+            <h1 class="header__title">MovieLib</h1>
+            <h2 class="header__subtitle">A basic movie library.</h2>
+        </header>
+        <main>
+            <div class="main__input-area">
+                <label for="main__movie-name" class="main__label">Movie Name:</label>
+                <input type="text" id="main__movie-name" class="main__input">
+                <label for="main__director-name" class="main__label" style="display: none">Director:</label>
+                <input type="text" id="main__director-name" class="main__input" style="display: none">
+                <label for="main__movie-year" class="main__label" style="display: none">Release Year:</label>
+                <input type="text" id="main__movie-year" class="main__input" style="display: none">
+                <div class="main__buttons">
+                    <button class="main__button main__btn-add">Add Movie</button>
+                    <button class="main__button main__btn-remove">Remove Movie</button>
+                    <button class="main__button main__btn-update">Update Movie</button>
+                    <button class="main__button main__btn-find">Find Movie</button>
+                    <button class="main__button main__btn-list">List Movies</button>
+                </div>
+
+            </div>
+            <div class="main__list-area">
+                <ol class="main__list">
+
+                </ol>
+            </div>
+        </main>
+        <footer>
+            <div class="footer__container">
+                <p>&copy; 2024 MovieLib</p>
+                <p>Created by Ahmet Kaan Yalçınkaya</p>
+            </div>
+
+        </footer>
+
+    </body>
+</html>
